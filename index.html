@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mucaev</title>
+
+    <style>
+
+        body{
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+         background-color: red;   
+
+        }
+        main{
+            
+            display: flex;
+            justify-content: center;
+            
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .yes{
+            color: white;
+            margin: 10px;
+            padding: 5px 10px;
+            background-color: green;
+            text-align: center;
+            height: 20px;
+            width: 30px;
+        }
+        .no{
+            color: white;
+            /* position: absolute; */
+            margin: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            height: 20px;
+            width: 30px;
+        }
+        .mucaev{
+            color: white;
+            font-size: 40px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="mucaev">
+        Раня Самая лучшая!!!
+    </div>
+    <main>
+        
+        
+
+        <div class="yes" onclick="yes()">
+            yes
+        </div>
+        <div class="no" onclick="no()">
+            no
+        </div>
+        
+    </main>
+    <script>// let _box = document.querySelector(".box")
+
+        // let a = false
+        
+        // function theme(){
+        //     a = !a
+        //     if(a){
+        //         _box.style.backgroundColor = "white"
+        //         _box.style.border = "2px solid black"
+                
+        //     } else if(!a){
+        //         _box.style.backgroundColor = "black"
+        //         _box.style.border = "2px solid white"
+        //     }
+        
+        // }
+        let main = document.querySelector("main")
+        let _yes = document.querySelector(".yes")
+        let _no = document.querySelector(".no")
+        let _mucaev = document.querySelector(".mucaev")
+        let a = 0
+        function no(){
+        
+            if(a == 0){
+            _no.style.position = "absolute"
+            _no.style.top = "100px"
+            _yes.style.padding = "10px 20px"
+            } 
+             else if(a == 1){
+                // _no.style.position = "absolute"
+                _no.style.left = "100px"
+                _yes.style.padding = "20px 40px"
+                _yes.innerHTML = "yeees!"
+            } else if(a == 2) {
+                // _no.style.position = "absolute"
+                _no.style.left = "0px"
+                _no.style.right = "100px"
+                _yes.innerHTML = "YEees!"
+            }
+            else if(a == 3){
+                //  _no.style.position = "absolute"
+                _no.style.right = "30px"
+                 _no.style.top = "0px"
+                 _yes.innerHTML = "Yees!"
+            }
+            else if(a == 4) {
+                _no.style.display = "none"
+                _yes.style.width = "300px"
+                _yes.style.height = "300px"
+                _yes.style.fontSize = "100px"
+                _yes.innerHTML = "YEES!"
+        
+            }
+            a++
+        }
+        function yes(){
+            _mucaev.style.textAlign = "center"
+            _mucaev.style.fontSize = "100px"
+            _mucaev.style.color = "blue"
+            _no.style.display = "none"
+            _yes.style.display = "none"
+            _mucaev.innerHTML = "Конечно самая лучшая" 
+        
+            let img =  document.createElement("img")
+            img.setAttribute("src", "heart3.jpg")
+            img.style.width = "500px"
+            img.style.height = "500px"
+            main.appendChild(img)
+        }</script>
+</body>
+</html>
